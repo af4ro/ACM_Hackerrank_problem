@@ -1,0 +1,22 @@
+l = input().split()
+m = int(l[0])
+n = int(l[1])
+k = int(input())
+mp = []
+for i in range(m):
+    mp .append(input().split())
+
+current_visit = 0
+i = 0
+j = 0
+len = 0
+while(current_visit != k):
+    if ((i-1)>=0 and (j-1)>=0 and (j+1)<k and (i+1)<k):
+        if mp[i+1][j] != 'X' and mp[i+1][j] == (k+1):
+            i+=1
+            k+=1
+            len+=1
+    break
+
+print(len)
+
