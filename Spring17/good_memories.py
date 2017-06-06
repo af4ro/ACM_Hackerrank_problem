@@ -14,6 +14,5 @@ for i in range(n):
     for j in range(m):
         temp = input().strip().split(',')
         for k in range(len(temp)):
-            for l in range(k+1,len(temp)):
-                outgoing[temp[k]].append(temp[l])
+            outgoing[temp[k]].extend(temp[k+1:len(temp)])
     operate(outgoing)
